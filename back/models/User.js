@@ -6,12 +6,11 @@ let userSchema = new mongoose.Schema
     {
         type : String,
         unique: true 
-    },
-    
+    },    
     password : {type : String}
 });
 
-const User = mongoose.model('User', userSchema);
+module.exports = mongoose.model('User', userSchema);
 
 
 

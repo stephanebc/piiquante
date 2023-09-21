@@ -103,9 +103,9 @@ export class SauceFormComponent implements OnInit {
           this.router.navigate(['/sauces']);
         }),
         catchError(error => {
-          console.error(error);
+          // console.error(error);
           this.loading = false;
-          this.errorMsg = error.message;
+          // this.errorMsg = error.message;
           return EMPTY;
         })
       ).subscribe();

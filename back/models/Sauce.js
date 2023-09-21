@@ -1,3 +1,5 @@
+const mongoose = require('mongoose');
+
 let sauceSchema = new mongoose.Schema
 ({
     userId : { type : String },
@@ -13,5 +15,5 @@ let sauceSchema = new mongoose.Schema
     usersDisliked : {type : String [user] }
 });
 
-const Sauce = mongoose.model('Sauce', sauceSchema);
+module.exports = mongoose.model('Sauce', sauceSchema);
 

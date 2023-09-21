@@ -18,7 +18,7 @@ export class SaucesService {
     this.http.get<Sauce[]>('http://localhost:3000/api/sauces').pipe(
       tap(sauces => this.sauces$.next(sauces)),
       catchError(error => {
-        console.error(error.error.message);
+        // console.error(error.error.message);
         return of([]);
       })
     ).subscribe();
